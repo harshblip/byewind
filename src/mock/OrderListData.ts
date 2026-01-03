@@ -1,0 +1,130 @@
+import { type Order } from "../types/OrderList.types";
+
+const NOW = Date.now();
+const HOUR = 3600000;
+const DAY = 86400000;
+
+export const MOCK_DATA: Order[] = [
+  {
+    id: "#CM9801",
+    user: { name: "Natali Craig", avatar: "https://i.pravatar.cc/150?u=1" },
+    project: "Landing Page",
+    address: "Meadow Lane Oakland",
+    timestamp: NOW - 2 * 60 * 1000,
+    status: "In Progress",
+  },
+  {
+    id: "#CM9802",
+    user: { name: "Kate Morrison", avatar: "https://i.pravatar.cc/150?u=2" },
+    project: "CRM Admin pages",
+    address: "Larry San Francisco",
+    timestamp: NOW - 15 * 60 * 1000,
+    status: "Complete",
+  },
+  {
+    id: "#CM9803",
+    user: { name: "Drew Cano", avatar: "https://i.pravatar.cc/150?u=3" },
+    project: "Client Project",
+    address: "Bagwell Avenue Ocala",
+    timestamp: NOW - 2 * HOUR,
+    status: "Pending",
+  },
+  {
+    id: "#CM9804",
+    user: { name: "Orlando Diggs", avatar: "https://i.pravatar.cc/150?u=4" },
+    project: "Admin Dashboard",
+    address: "Washburn Baton Rouge",
+    timestamp: NOW - DAY,
+    status: "Approved",
+  },
+  {
+    id: "#CM9805",
+    user: { name: "Andi Lane", avatar: "https://i.pravatar.cc/150?u=5" },
+    project: "App Landing Page",
+    address: "Nest Lane Olivette",
+    timestamp: NOW - 2 * DAY,
+    status: "Rejected",
+  },
+  {
+    id: "#CM9806",
+    user: { name: "Sophie Miller", avatar: "https://i.pravatar.cc/150?u=6" },
+    project: "Landing Page",
+    address: "Sunset Blvd LA",
+    timestamp: NOW - 2.5 * DAY,
+    status: "In Progress",
+  },
+  {
+    id: "#CM9807",
+    user: { name: "James Kim", avatar: "https://i.pravatar.cc/150?u=7" },
+    project: "Client Project",
+    address: "Pine Street Seattle",
+    timestamp: NOW - 3 * DAY,
+    status: "Pending",
+  },
+  {
+    id: "#CM9808",
+    user: { name: "Sarah Connors", avatar: "https://i.pravatar.cc/150?u=8" },
+    project: "CRM Admin pages",
+    address: "Maple Ave Austin",
+    timestamp: NOW - 4 * DAY,
+    status: "Complete",
+  },
+  {
+    id: "#CM9809",
+    user: { name: "Mike Ross", avatar: "https://i.pravatar.cc/150?u=9" },
+    project: "Admin Dashboard",
+    address: "Oak Lane Chicago",
+    timestamp: NOW - 5 * DAY,
+    status: "Approved",
+  },
+  {
+    id: "#CM9810",
+    user: { name: "Rachel Zane", avatar: "https://i.pravatar.cc/150?u=10" },
+    project: "App Landing Page",
+    address: "Wall St NY",
+    timestamp: NOW - 6 * DAY,
+    status: "Rejected",
+  },
+
+  // Page 2 Data (Older)
+  {
+    id: "#CM9811",
+    user: { name: "Harvey Specter", avatar: "https://i.pravatar.cc/150?u=11" },
+    project: "Client Project",
+    address: "Pearson St NY",
+    timestamp: NOW - 7 * DAY,
+    status: "Pending",
+  },
+  {
+    id: "#CM9812",
+    user: { name: "Donna Paulsen", avatar: "https://i.pravatar.cc/150?u=12" },
+    project: "CRM Admin pages",
+    address: "Broadway NY",
+    timestamp: NOW - 8 * DAY,
+    status: "Complete",
+  },
+  {
+    id: "#CM9813",
+    user: { name: "Louis Litt", avatar: "https://i.pravatar.cc/150?u=13" },
+    project: "Admin Dashboard",
+    address: "Lexington Ave NY",
+    timestamp: NOW - 9 * DAY,
+    status: "In Progress",
+  },
+  {
+    id: "#CM9814",
+    user: { name: "Jessica Pearson", avatar: "https://i.pravatar.cc/150?u=14" },
+    project: "Landing Page",
+    address: "Park Ave NY",
+    timestamp: NOW - 10 * DAY,
+    status: "Approved",
+  },
+  {
+    id: "#CM9815",
+    user: { name: "Katrina Bennett", avatar: "https://i.pravatar.cc/150?u=15" },
+    project: "App Landing Page",
+    address: "Madison Ave NY",
+    timestamp: NOW - 11 * DAY,
+    status: "Rejected",
+  },
+];
