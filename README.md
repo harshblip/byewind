@@ -11,6 +11,7 @@
      <img src = "https://img.shields.io/badge/Tailwind_CSS-164B99?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" />
  </p>
 
+### Live - [here](https://byewind.vercel.app)
 ## Approach
 - i started by keeping the code modular and production-grade as much possible
 - i divided features into separate atomic components which can be reused anywhere (with proper props passed to it)
@@ -64,3 +65,4 @@ Start the Vite development server.
 npm run dev
 ```
 </div>
+
