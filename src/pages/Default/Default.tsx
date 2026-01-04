@@ -2,7 +2,6 @@ import ProjectionsChart from "../../components/Charts/BarChart";
 import RevenueByLocation from "../../components/Charts/RevenueByLocation";
 import RevenueChart from "../../components/Charts/RevenueChart";
 import TotalSalesChart from "../../components/Charts/TotalSalesChart";
-import { MAPDATA } from "../../mock/ActivitiesData";
 import ProductsTable from "./components/ProductsTable";
 import StatCard from "./components/StatCard";
 
