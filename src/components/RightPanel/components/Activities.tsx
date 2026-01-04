@@ -5,7 +5,7 @@ export default function Activities() {
   return (
     <>
       <div className="mb-8">
-        <h3 className="text-sm font-semibold text-gray-900 mb-4">Activities</h3>
+        <h3 className="text-sm font-semibold text-gray-900 dark:bg-[#1C1C1C] dark:text-white mb-4">Activities</h3>
         <div className="space-y-0">
           {ACTIVITIES.map((activity, index) => {
             const isLast = index === ACTIVITIES.length - 1;
@@ -27,7 +27,7 @@ export default function Activities() {
                 </div>
 
                 <div className="flex flex-col pt-1">
-                  <span className="text-sm text-gray-800 line-clamp-1">
+                  <span className="text-sm text-gray-800 dark:bg-[#1C1C1C] dark:text-white line-clamp-1">
                     {activity.action}
                   </span>
                   <span className="text-xs text-gray-400">

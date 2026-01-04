@@ -18,7 +18,7 @@ const NotificationIcon = ({ type }: { type: NotificationType }) => {
 
   return (
     <div
-      className={`w-8 h-8 rounded-full ${bg} flex items-center justify-center shrink-0`}
+      className={`w-8 h-8 rounded-xl ${bg} flex items-center justify-center shrink-0`}
     >
       <Icon className={`w-4 h-4 ${text}`} />
     </div>
@@ -29,7 +29,7 @@ export default function Notifications() {
   return (
     <>
       <div className="mb-8">
-        <h3 className="text-sm font-semibold text-gray-900 mb-4">
+        <h3 className="text-sm font-semibold text-gray-900 dark:bg-[#1C1C1C] dark:text-white mb-4">
           Notifications
         </h3>
         <div className="space-y-4">
@@ -38,7 +38,7 @@ export default function Notifications() {
               <NotificationIcon type={item.type} />
               <div className="flex flex-col">
                 <span
-                  className="text-sm text-gray-800 line-clamp-1"
+                  className="text-sm text-gray-800 dark:bg-[#1C1C1C] dark:text-white line-clamp-1"
                   title={item.message}
                 >
                   {item.message}

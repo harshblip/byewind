@@ -9,6 +9,7 @@ interface StatCardProps {
   percentage: string;
   trend: "up" | "down";
   bgColor: string;
+  darkColor: string;
 }
 
 export default function StatCard({
@@ -17,24 +18,21 @@ export default function StatCard({
   percentage,
   trend,
   bgColor,
+  darkColor
 }: StatCardProps) {
   return (
     <>
       <div
-        className={`${bgColor} rounded-2xl p-5 flex flex-col justify-between h-36 w-full transition-transform hover:-translate-y-1 duration-300`}
+        className={`${bgColor} dark:${darkColor} rounded-2xl p-6 flex flex-col justify-between h-36 w-full transition-transform hover:-translate-y-1 duration-300`}
       >
-        <h3 className="text-sm font-semibold text-gray-700">{title}</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mt-2">{title}</h3>
         <div>
           <div className="flex flex-wrap items-end gap-2">
             <span className="text-2xl sm:text-3xl font-bold text-gray-900">
               {value}
             </span>
             <span
-              className={`text-xs font-medium px-2 py-0.5 rounded-full flex items-center gap-1 ${
-                trend === "up"
-                  ? "text-green-700 bg-green-100"
-                  : "text-red-700 bg-red-100"
-              }`}
+              className={`text-xs font-medium px-2 py-0.5 rounded-full flex items-center gap-1 $`}
             >
               {percentage}
               {trend === "up" ? (

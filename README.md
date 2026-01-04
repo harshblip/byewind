@@ -1,6 +1,5 @@
 <div align="center">
 
-
 <img src="https://socialify.git.ci/harshblip/byewind/image?font=Raleway&language=1&name=1&pattern=Plus&theme=Dark" height="300" />
 </div>
 <h3 align="center"> byewind </h3>
@@ -12,7 +11,9 @@
  </p>
 
 ### Live - [here](https://byewind.vercel.app)
+
 ## Approach
+
 - i started by keeping the code modular and production-grade as much possible
 - i divided features into separate atomic components which can be reused anywhere (with proper props passed to it)
 - instead of using hard-coded data for charts and users. i used mock data (with type-safety) which is dynamic and can be easily integrated/replaced when real api's are implemented
@@ -22,10 +23,12 @@
 - categorized each file into relevant folders. so that its easier to locate/find any file/function
 
 ## challenges
+
 - i faced challenge during designing the complex bento-like grid and making it responsive.
 - layout structuring and optimizing the code for modularity and consistency
 
 ## improvements
+
 - implemented smooth animations to ui interactions
 - added filtering, sorting and searching for users
 
@@ -37,13 +40,14 @@ Follow these instructions to set up the project locally on your machine.
 
 Before you begin, ensure you have the following installed:
 
-*   **Node.js**: Version 18.0.0 or higher (LTS recommended).
-*   **Package Manager**: `npm`, `yarn`, or `pnpm` (This guide uses `npm`).
-*   **Git**: For cloning the repository.
+- **Node.js**: Version 18.0.0 or higher (LTS recommended).
+- **Package Manager**: `npm`, `yarn`, or `pnpm` (This guide uses `npm`).
+- **Git**: For cloning the repository.
 
 ### Installation
 
 ### 1. Clone the Repository
+
 Open your terminal and clone the repository to your local machine.
 
 ```bash
@@ -52,7 +56,9 @@ cd byewind
 ```
 
 ### 2. Install Dependencies
+
 Install the required packages defined in package.json.
+
 ```bash
 npm install
 # or
@@ -60,9 +66,11 @@ yarn install
 ```
 
 ### 3. Run the Development Server
+
 Start the Vite development server.
+
 ```bash
 npm run dev
 ```
-</div>
 
+</div>

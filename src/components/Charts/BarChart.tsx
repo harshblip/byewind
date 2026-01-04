@@ -51,8 +51,8 @@ const CustomTooltip = ({
 
 export default function ProjectionsChart() {
   return (
-    <div className="bg-[#F7F9FB] md:p-6 rounded-4xl w-full h-full flex flex-col">
-      <h2 className="text-lg font-bold text-gray-900 mb-6">
+    <div className="bg-[#F7F9FB] dark:bg-[#1C1C1C] md:p-6 rounded-4xl w-full h-full flex flex-col">
+      <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-6">
         Projections vs Actuals
       </h2>
 

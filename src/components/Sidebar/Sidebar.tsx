@@ -21,8 +21,9 @@ export default function Sidebar({
 
       <div
         className={clsx(
-          "fixed inset-y-0 left-0 z-30 h-full border-r border-gray-200 bg-white transition-transform duration-300 ease-in-out",
+          "fixed inset-y-0 left-0 z-30 h-full border-r dark:border-none border-gray-200 bg-white transition-transform duration-300 ease-in-out",
           "w-64",
+          "dark:bg-[#1C1C1C] dark:text-white",
           "md:relative md:translate-x-0",
           isOpen
             ? "translate-x-0 md:w-64 md:opacity-100"
@@ -64,7 +65,7 @@ export default function Sidebar({
           {SIDEBAR_DATA.map((section, index) => (
             <div key={index} className="mb-2">
               {section.title && (
-                <h3 className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                <h3 className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-gray-400 dark">
                   {section.title}
                 </h3>
               )}

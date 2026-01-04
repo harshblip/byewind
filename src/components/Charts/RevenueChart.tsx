@@ -19,7 +19,7 @@ const DATA = [
 
 export default function RevenueChart() {
   return (
-    <div className="bg-[#F7F9FB] md:p-6 rounded-4xl w-full h-full flex flex-col">
+    <div className="bg-[#F7F9FB] dark:bg-gray-800 md:p-6 rounded-4xl w-full h-full flex flex-col">
       <div className="flex flex-wrap items-center gap-6 mb-8">
         <h2 className="text-lg font-bold text-gray-900 border-r border-gray-300 pr-6">
           Revenue
