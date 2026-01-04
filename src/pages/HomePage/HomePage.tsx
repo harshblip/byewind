@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <>
-      <div className="h-fit mt-[20%] flex justify-center items-center text-cyan-800 dark:text-white flex-col p-4">
+      <div className="h-screen -mt-[20%] md:-mt-[5%] flex justify-center items-center text-cyan-800 dark:text-white flex-col p-4">
         <p className="text-7xl">
           Welcome <span className="text-sm">to</span>
         </p>
