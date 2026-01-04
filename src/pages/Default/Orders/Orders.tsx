@@ -126,8 +126,8 @@ export default function OrderList() {
                   onClick={() => setCurrentPage(pageNum)}
                   className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                     currentPage === pageNum
-                      ? "bg-gray-100 dark:bg-slate-800 dark:text-white text-gray-700"
-                      : "text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700"
+                      ? "bg-gray-100 dark:bg-[#1C1C1C] dark:text-white text-gray-700"
+                      : "text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-900"
                   }`}
                 >
                   {pageNum}

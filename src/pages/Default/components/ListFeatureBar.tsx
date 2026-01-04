@@ -30,10 +30,10 @@ export default function ListFeatureBar({
   const projectOptions = Array.from(new Set(MOCK_DATA.map((o) => o.project)));
   return (
     <>
-      <div className="bg-[#F7F9FB] dark:bg-slate-800 dark:text-white p-2 rounded-xl mb-6 flex flex-col gap-4">
+      <div className="bg-[#F7F9FB] dark:bg-[#1C1C1C] dark:border-gray-700 dark:border dark:text-white p-2 rounded-xl mb-6 flex flex-col gap-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div className="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
-            <button className="p-2 bg-white md:bg-transparent border border-gray-200 md:border-transparent hover:bg-gray-200 dark:hover:bg-gray-900 rounded-lg transition-colors text-gray-600 shrink-0 dark:text-white">
+            <button className="p-2 bg-white md:bg-transparent border border-gray-200 dark:border-none md:border-transparent hover:bg-gray-200 dark:hover:bg-gray-900 dark:bg-[#1C1C1C] rounded-lg transition-colors text-gray-600 shrink-0 dark:text-white">
               <PlusIcon className="w-5 h-5" />
             </button>
             <button
@@ -41,14 +41,14 @@ export default function ListFeatureBar({
               className={`dark:text-white p-2 rounded-lg transition-colors border shrink-0 ${
                 showFilters
                   ? "bg-white dark:bg-black/80 dark:text-white dark:border-none border-gray-300 text-blue-600"
-                  : "bg-white md:bg-transparent dark:border-none border-gray-200 md:border-transparent hover:bg-gray-200 dark:hover:bg-gray-900 text-gray-600"
+                  : "bg-white md:bg-transparent dark:border-none border-gray-200 md:border-transparent hover:bg-gray-200 dark:bg-[#1C1C1C] dark:hover:bg-gray-900 text-gray-600"
               }`}
             >
               <FunnelIcon className="w-5 h-5" />
             </button>
             <button
               onClick={() => requestSort("timestamp")}
-              className="p-2 bg-white md:bg-transparent border border-gray-200 md:border-transparent hover:bg-gray-200 dark:hover:bg-gray-900 rounded-lg transition-colors text-gray-600 shrink-0 dark:text-white"
+              className="p-2 bg-white md:bg-transparent border border-gray-200 dark:border-none md:border-transparent hover:bg-gray-200 dark:bg-[#1C1C1C] dark:hover:bg-gray-900 rounded-lg transition-colors text-gray-600 shrink-0 dark:text-white"
             >
               <ArrowsUpDownIcon className="w-5 h-5" />
             </button>

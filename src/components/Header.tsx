@@ -23,25 +23,24 @@ export default function Header({
   onToggleRightPanel: () => void;
 }) {
   const location = useLocation();
-
   const pathSegments: string[] = location.pathname.split("/").filter((x) => x);
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-20 flex w-full items-center justify-between border-b border-gray-200 dark:border-b-gray-600 bg-white dark:bg-black/80 dark:text-white px-6 py-4">
-      <div className="flex items-center gap-4">
+    <header className="sticky top-0 z-20 flex w-full items-center justify-between border-b border-gray-200 dark:border-b-gray-600 bg-white dark:bg-black/80 dark:text-white px-4 py-4 md:px-6">
+      <div className="flex items-center gap-2 md:gap-4">
         <button
           onClick={onToggleSidebar}
-          className="text-gray-500 hover:text-gray-700 dark:text-white transition-colors"
+          className="text-gray-500 hover:text-gray-700 dark:text-white transition-colors p-1"
         >
           <Bars3Icon className="h-6 w-6" />
         </button>
 
-        <button className="text-gray-400 dark:text-white hover:text-yellow-500 transition-colors">
+        <button className="hidden sm:block text-gray-400 dark:text-white hover:text-yellow-500 transition-colors">
           <StarIcon className="h-6 w-6" />
         </button>
 
-        <nav className="flex items-center text-sm font-medium text-gray-500">
+        <nav className="hidden md:flex items-center text-sm font-medium text-gray-500">
           <span className="hover:text-gray-900 dark:text-white transition-colors cursor-pointer">
             Dashboards
           </span>
@@ -76,20 +75,24 @@ export default function Header({
         </nav>
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-2 md:gap-6">
         <div className="hidden md:flex relative group dark:border dark:border-gray-700 dark:rounded-lg">
           <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-gray-600 dark:group-focus-within:text-white" />
           <input
             type="text"
             placeholder="Search"
-            className="md:flex hidden h-10 w-64 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-white pl-10 pr-12 text-sm text-gray-700 placeholder-gray-400 outline-none focus:bg-white focus:ring-2 focus:ring-black/5 transition-all"
+            className="h-10 w-48 lg:w-64 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-white pl-10 pr-12 text-sm text-gray-700 placeholder-gray-400 outline-none focus:bg-white focus:ring-2 focus:ring-black/5 transition-all"
           />
           <div className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-sans dark:text-white">
             ⌘/
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-gray-500">
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-4 text-gray-500">
+          <button className="md:hidden p-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-white">
+            <MagnifyingGlassIcon className="h-6 w-6" />
+          </button>
+
           <button
             onClick={toggleTheme}
             className="p-1.5 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
@@ -102,13 +105,13 @@ export default function Header({
             )}
           </button>
 
-          <button className="hover:text-gray-900 transition-colors hover:bg-gray-100 p-1.5 rounded-full dark:bg-black/80 dark:text-white">
+          <button className="hidden sm:block hover:text-gray-900 transition-colors hover:bg-gray-100 p-1.5 rounded-full dark:bg-black/80 dark:text-white">
             <ClockIcon className="h-6 w-6" />
           </button>
 
           <button className="relative hover:text-gray-900 transition-colors hover:bg-gray-100 p-1.5 rounded-full dark:bg-black/80 dark:text-white">
             <BellIcon className="h-6 w-6" />
-            <span className="absolute top-1.5 right-2 h-2 w-2 rounded-full bg-red-500 border border-white"></span>
+            <span className="absolute top-1.5 right-2 h-2 w-2 rounded-full bg-red-500 border border-white dark:border-black"></span>
           </button>
 
           <button

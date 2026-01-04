@@ -33,7 +33,7 @@ export default function DesktopOrderRow({
   return (
     <>
       <tr
-        className="group hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-50 dark:border-gray-700 last:border-none opacity-0 transition animate-[fadeIn_0.3s_ease-out_forwards]"
+        className="group hover:bg-gray-50 dark:hover:bg-[#1C1C1C] border-b border-gray-50 dark:border-gray-700 last:border-none opacity-0 transition animate-[fadeIn_0.3s_ease-out_forwards]"
         style={{ animationDelay: `${index * 0.03}s` }}
       >
         <td className="p-4">
