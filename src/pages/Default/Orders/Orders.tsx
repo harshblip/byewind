@@ -23,7 +23,7 @@ export default function OrderList() {
   } = useOrderTable(MOCK_DATA, 10);
 
   return (
-    <div className="p-4 md:p-8 bg-white dark:bg-[#1C1C1C] dark:text-white min-h-screen font-sans text-gray-800 animate-[fadeIn_0.6s_ease-out_forwards]">
+    <div className="p-4 md:p-8 bg-white dark:bg-black/80 dark:text-white min-h-screen font-sans text-gray-800 animate-[fadeIn_0.6s_ease-out_forwards]">
       <style>{`
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       `}</style>
@@ -39,10 +39,10 @@ export default function OrderList() {
       />
 
       {/* 1. DESKTOP VIEW (Table) */}
-      <div className="hidden md:block bg-white dark:bg-[#1C1C1C] dark:text-white rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+      <div className="hidden md:block bg-white dark:bg-black/80 dark:text-white rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-gray-400 text-sm border-b border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-[#1C1C1C] dark:text-white">
+            <tr className="text-gray-400 text-sm border-b border-gray-100 dark:border-gray-700 bg-gray-50/50 dark:bg-black/80 dark:text-white">
               <th className="p-4 w-12">
                 <input type="checkbox" className="rounded border-gray-300" />
               </th>
@@ -107,7 +107,7 @@ export default function OrderList() {
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-[#1C1C1C] dark:text-gray-300 rounded-lg text-gray-400 disabled:opacity-50"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-black/80 dark:text-gray-300 rounded-lg text-gray-400 disabled:opacity-50"
           >
             <ChevronLeftIcon className="w-4 h-4" />
           </button>
@@ -141,7 +141,7 @@ export default function OrderList() {
               setCurrentPage((prev) => Math.min(prev + 1, totalPages))
             }
             disabled={currentPage === totalPages}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-[#1C1C1C] dark:text-gray-300 rounded-lg text-gray-400 disabled:opacity-50"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 dark:bg-black/80 dark:text-gray-300 rounded-lg text-gray-400 disabled:opacity-50"
           >
             <ChevronRightIcon className="w-4 h-4" />
           </button>

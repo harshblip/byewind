@@ -42,7 +42,7 @@ const SidebarItem = ({ item, depth = 0 }: SidebarItemProps) => {
         onClick={handleClick}
         className={clsx(
           "group relative flex w-full items-center gap-3 rounded-lg py-2 text-sm font-medium transition-all duration-200 hover:cursor-pointer",
-          "dark:bg-[#1C1C1C] dark:text-white",
+          "dark:bg-black/80 dark:text-white",
           isActive
             ? "bg-gray-100 text-gray-900"
             : "text-gray-500 hover:bg-gray-200"
@@ -53,7 +53,7 @@ const SidebarItem = ({ item, depth = 0 }: SidebarItemProps) => {
           <ChevronRightIcon
             className={clsx(
               "mr-2 h-4 w-4 text-gray-400 transition-transform duration-200",
-              "dark:bg-[#1C1C1C] dark:text-white",
+              "dark:bg-black/80 dark:text-white",
               isOpen && "rotate-90"
             )}
           />
@@ -66,7 +66,7 @@ const SidebarItem = ({ item, depth = 0 }: SidebarItemProps) => {
           <item.icon
             className={clsx(
               "h-5 w-5",
-              "dark:bg-[#1C1C1C] dark:text-white",
+              "dark:bg-black/80 dark:text-white",
               isActive
                 ? "text-black"
                 : "text-gray-400 group-hover:text-gray-600"

@@ -4,7 +4,7 @@ export default function Contacts() {
   return (
     <>
       <div>
-        <h3 className="text-sm font-semibold text-gray-900 dark:bg-[#1C1C1C] dark:text-white mb-4">Contacts</h3>
+        <h3 className="text-sm font-semibold text-gray-900 dark:bg-black/80 dark:text-white mb-4">Contacts</h3>
         <div className="space-y-4">
           {CONTACTS.map((contact) => (
             <div

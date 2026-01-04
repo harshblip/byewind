@@ -42,7 +42,7 @@ export default function MainLayout() {
   };
   return (
     <>
-      <div className="flex fade-in dark:bg-[#1C1C1C] dark:text-white">
+      <div className="flex fade-in dark:bg-black dark:text-white">
         <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
         <div className="w-full flex flex-col fade-in delay-1">
           <Header

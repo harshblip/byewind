@@ -40,7 +40,7 @@ export default function ListFeatureBar({
               onClick={() => setShowFilters(!showFilters)}
               className={`dark:text-white p-2 rounded-lg transition-colors border shrink-0 ${
                 showFilters
-                  ? "bg-white dark:bg-[#1C1C1C] dark:text-white dark:border-none border-gray-300 text-blue-600"
+                  ? "bg-white dark:bg-black/80 dark:text-white dark:border-none border-gray-300 text-blue-600"
                   : "bg-white md:bg-transparent dark:border-none border-gray-200 md:border-transparent hover:bg-gray-200 dark:hover:bg-gray-900 text-gray-600"
               }`}
             >
@@ -61,19 +61,19 @@ export default function ListFeatureBar({
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 dark:bg-[#1C1C1C] dark:text-white dark:border-white/50 pr-4 py-2 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm"
+              className="w-full pl-10 dark:bg-black/80 dark:text-white dark:border-white/50 pr-4 py-2 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-sm"
             />
           </div>
         </div>
 
         {showFilters && (
-          <div className="flex flex-wrap gap-4 p-4 bg-white dark:bg-[#1C1C1C] dark:text-white dark:border-white/50 border border-gray-100 rounded-lg shadow-sm animate-[fadeIn_0.2s_ease-out_forwards]">
+          <div className="flex flex-wrap gap-4 p-4 bg-white dark:bg-black/80 dark:text-white dark:border-white/50 border border-gray-100 rounded-lg shadow-sm animate-[fadeIn_0.2s_ease-out_forwards]">
             <div className="flex flex-col gap-1 w-full md:w-auto">
               <label className="text-xs font-semibold text-gray-500 uppercase">
                 Project
               </label>
               <select
-                className="bg-gray-50 dark:bg-[#1C1C1C] dark:text-white dark:border-white/50 border border-gray-200 text-sm rounded-md p-2 w-full md:min-w-37.5 outline-none focus:ring-1 focus:ring-blue-200"
+                className="bg-gray-50 dark:bg-black/80 dark:text-white dark:border-white/50 border border-gray-200 text-sm rounded-md p-2 w-full md:min-w-37.5 outline-none focus:ring-1 focus:ring-blue-200"
                 value={filters.project}
                 onChange={(e) => updateFilter("project", e.target.value)}
               >
@@ -91,7 +91,7 @@ export default function ListFeatureBar({
                 Status
               </label>
               <select
-                className="bg-gray-50 dark:bg-[#1C1C1C] dark:text-white border border-gray-200 dark:border-white/50 text-sm rounded-md p-2 w-full md:min-w-37.5 outline-none focus:ring-1 focus:ring-blue-200"
+                className="bg-gray-50 dark:bg-black/80 dark:text-white border border-gray-200 dark:border-white/50 text-sm rounded-md p-2 w-full md:min-w-37.5 outline-none focus:ring-1 focus:ring-blue-200"
                 value={filters.status}
                 onChange={(e) => updateFilter("status", e.target.value)}
               >

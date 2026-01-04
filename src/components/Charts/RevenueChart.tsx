@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useTheme } from "../../hooks/useTheme";
 
 const DATA = [
   { name: "Jan", current: 10, previous: 15 },
@@ -18,23 +19,29 @@ const DATA = [
 ];
 
 export default function RevenueChart() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
   return (
-    <div className="bg-[#F7F9FB] dark:bg-gray-800 md:p-6 rounded-4xl w-full h-full flex flex-col">
+    <div className="bg-[#F7F9FB] dark:bg-[#1C1C1C] md:p-6 rounded-4xl w-full h-full flex flex-col">
       <div className="flex flex-wrap items-center gap-6 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 border-r border-gray-300 pr-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white border-r border-gray-300 pr-6">
           Revenue
         </h2>
 
         <div className="flex items-center gap-2 text-sm">
-          <span className="w-2 h-2 rounded-full bg-gray-900"></span>
-          <span className="text-gray-600">Current Week</span>
-          <span className="font-semibold text-gray-900">$58,211</span>
+          <span className="w-2 h-2 rounded-full bg-gray-900 dark:bg-gray-400 dark:text-white"></span>
+          <span className="text-gray-600 dark:text-white">Current Week</span>
+          <span className="font-semibold text-gray-900 dark:text-white">
+            $58,211
+          </span>
         </div>
 
         <div className="flex items-center gap-2 text-sm">
-          <span className="w-2 h-2 rounded-full bg-[#A8C5DA]"></span>
-          <span className="text-gray-600">Previous Week</span>
-          <span className="font-semibold text-gray-900">$68,768</span>
+          <span className="w-2 h-2 rounded-full bg-[#A8C5DA] dark:text-white"></span>
+          <span className="text-gray-600 dark:text-white">Previous Week</span>
+          <span className="font-semibold text-gray-900 dark:text-white">
+            $68,768
+          </span>
         </div>
       </div>
 
@@ -70,13 +77,13 @@ export default function RevenueChart() {
             <Line
               type="monotone"
               dataKey="current"
-              stroke="#1F2937"
+              stroke={isDark ? "#caf0f8" : "#1F2937"}
               strokeWidth={3}
               dot={false}
               activeDot={{
                 r: 6,
                 fill: "#1F2937",
-                stroke: "#fff",
+                stroke: isDark ? "#caf0f8" : "FFF",
                 strokeWidth: 2,
               }}
             />
@@ -84,9 +91,9 @@ export default function RevenueChart() {
             <Line
               type="monotone"
               dataKey="previous"
-              stroke="#A8C5DA"
+              stroke={isDark ? "#9f86c0" : "#A8C5DA"}
               strokeWidth={3}
-              strokeDasharray="5 5" 
+              strokeDasharray="5 5"
               dot={false}
             />
           </LineChart>

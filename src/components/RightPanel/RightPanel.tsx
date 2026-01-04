@@ -25,7 +25,7 @@ export default function RightPanel({
         className={clsx(
           "fixed inset-y-0 right-0 z-30 h-full dark:border-gray-700 border-l border-gray-200 bg-white transition-transform duration-300 ease-in-out",
           "w-full md:w-auto",
-          "dark:bg-[#1C1C1C] dark:text-white",
+          "dark:bg-black/80 dark:text-white",
           "md:relative md:translate-x-0",
           isOpen 
             ? "translate-x-0 md:opacity-100" 

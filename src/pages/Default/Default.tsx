@@ -1,4 +1,5 @@
 import ProjectionsChart from "../../components/Charts/BarChart";
+import RevenueByLocation from "../../components/Charts/RevenueByLocation";
 import RevenueChart from "../../components/Charts/RevenueChart";
 import TotalSalesChart from "../../components/Charts/TotalSalesChart";
 import { MAPDATA } from "../../mock/ActivitiesData";
@@ -7,8 +8,10 @@ import StatCard from "./components/StatCard";
 
 export default function Default() {
   return (
-    <div className="p-4 md:p-6 bg-white dark:bg-[#1C1C1C] min-h-screen font-sans text-slate-800 animate-[fadeIn_0.6s_ease-out_forwards]">
-      <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-6">eCommerce</h1>
+    <div className="p-4 md:p-6 bg-white dark:bg-black/80 min-h-screen font-sans text-slate-800 animate-[fadeIn_0.6s_ease-out_forwards]">
+      <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+        eCommerce
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           <StatCard
@@ -25,7 +28,8 @@ export default function Default() {
             percentage="-0.03%"
             trend="down"
             bgColor="bg-gray-50"
-            darkColor="bg-[#FFFFFF0D]"
+            darkColor="bg-[#1C1C1C]"
+            darkText="text-white"
           />
           <StatCard
             title="Revenue"
@@ -33,14 +37,15 @@ export default function Default() {
             percentage="+15.03%"
             trend="up"
             bgColor="bg-gray-50"
-            darkColor="bg-[#FFFFFF0D]"
+            darkColor="bg-[#1C1C1C]"
+            darkText="text-white"
           />
           <StatCard
             title="Growth"
             value="30.1%"
             percentage="+6.08%"
             trend="up"
-            bgColor="bg-blue-50"
+            bgColor="bg-purple-50"
             darkColor="bg-[#E5ECF6]"
           />
         </div>
@@ -49,38 +54,17 @@ export default function Default() {
           <ProjectionsChart />
         </div>
 
-        <div className="lg:col-span-8 bg-gray-50 dark:bg-gray-800 rounded-2xl p-5">
+        <div className="lg:col-span-8 bg-gray-50 dark:bg-[#1C1C1C] rounded-2xl p-5">
           <RevenueChart />
         </div>
 
-        <div className="lg:col-span-4 bg-gray-50 rounded-2xl p-5 flex flex-col">
-          <h3 className="font-semibold text-gray-900 mb-6">
-            Revenue by Location
-          </h3>
-          <div className="flex-1 bg-gray-200 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
-            <div className="opacity-30 bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-cover bg-no-repeat w-full h-full grayscale"></div>
-            <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-black rounded-full border border-white"></div>
-            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-black rounded-full border border-white"></div>
-          </div>
-
-          <div className="space-y-4">
-            {MAPDATA.map((loc) => (
-              <div key={loc.name}>
-                <div className="flex justify-between text-xs sm:text-sm mb-1">
-                  <span className="text-gray-600">{loc.name}</span>
-                  <span className="text-gray-900 font-medium">{loc.val}</span>
-                </div>
-                <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                  <div className={`h-full bg-blue-300 ${loc.width}`}></div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="lg:col-span-4 bg-gray-50 dark:bg-[#1C1C1C] rounded-2xl p-2 flex flex-col">
+          <RevenueByLocation />
         </div>
 
         <ProductsTable />
 
-        <div className="lg:col-span-4 bg-gray-50 rounded-2xl p-5 flex flex-col min-h-75">
+        <div className="lg:col-span-4 bg-gray-50 dark:bg-[#1C1C1C] rounded-2xl p-5 flex flex-col min-h-75">
           <TotalSalesChart />
         </div>
       </div>
