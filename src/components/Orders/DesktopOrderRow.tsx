@@ -40,16 +40,19 @@ export default function DesktopOrderRow({
           <input
             type="checkbox"
             className="
-            peer relative appearance-none shrink-0 w-5 h-5 border rounded-md mt-1
-            border-gray-600 bg-gray-700/30
-            checked:bg-purple-300 checked:border-purple-300
-            /* The Checkmark Icon (Encoded SVG) */
-            checked:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22black%22%3E%3Cpath%20d%3D%22M12.207%204.793a1%201%200%20010%201.414l-5%205a1%201%200%2001-1.414%200l-2-2a1%201%200%20011.414-1.414L6.5%209.086l4.293-4.293a1%201%200%20011.414%200z%22%2F%3E%3C%2Fsvg%3E')]
-            checked:bg-center checked:bg-no-repeat
-            
-            cursor-pointer transition-all duration-200 ease-in-out
-            focus:outline-none focus:ring-2 focus:ring-purple-500/50
-          "
+    peer relative appearance-none shrink-0 w-5 h-5 border rounded-md mt-1
+    cursor-pointer transition-all duration-200 ease-in-out
+    focus:outline-none focus:ring-2 focus:ring-purple-500/50
+    checked:bg-center checked:bg-no-repeat
+
+    dark:bg-white dark:border-gray-300
+    dark:checked:bg-purple-300 dark:checked:border-purple-300
+    dark:checked:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22black%22%3E%3Cpath%20d%3D%22M12.207%204.793a1%201%200%20010%201.414l-5%205a1%201%200%2001-1.414%200l-2-2a1%201%200%20011.414-1.414L6.5%209.086l4.293-4.293a1%201%200%20011.414%200z%22%2F%3E%3C%2Fsvg%3E')]
+
+    bg-white border-gray-600
+    checked:bg-gray-900 checked:border-gray-900
+    checked:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M12.207%204.793a1%201%200%20010%201.414l-5%205a1%201%200%2001-1.414%200l-2-2a1%201%200%20011.414-1.414L6.5%209.086l4.293-4.293a1%201%200%20011.414%200z%22%2F%3E%3C%2Fsvg%3E')]
+  "
           />
         </td>
         <td className="p-4 text-gray-600 dark:text-white font-mono text-xs">
