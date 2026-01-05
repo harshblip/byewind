@@ -22,10 +22,6 @@
   font-family: "Atkinson Hyperlegible Mono";
 }
 
-@theme {
-  --color-primary: #474747;
-}
-
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
@@ -38,22 +34,4 @@
 .fade-in {
   opacity: 0;
   animation: fadeInAnimation 0.2s ease-in-out forwards;
-}
-
-.delay-1 {
-  animation-delay: 0.2s;
-}
-.delay-2 {
-  animation-delay: 0.5s;
-}
-.delay-3 {
-  animation-delay: 1s;
-}
-.delay-4 {
-  animation-delay: 2s;
-}
-
-button:hover {
-  cursor: pointer;
-  box-shadow: 2px solid gray;
 }

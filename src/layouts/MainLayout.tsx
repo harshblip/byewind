@@ -44,7 +44,7 @@ export default function MainLayout() {
     <>
       <div className="flex fade-in dark:bg-black dark:text-white">
         <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-        <div className="w-full flex flex-col fade-in delay-1">
+        <div className="w-full flex flex-col fade-in">
           <Header
             onToggleSidebar={toggleSidebar}
             onToggleRightPanel={toggleRightPanel}

@@ -5,15 +5,14 @@ import {
   Marker,
 } from "react-simple-maps";
 
-// 1. Data Configuration
 const GEO_URL =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 interface LocationData {
   name: string;
   value: string;
-  amount: number; // Used for progress bar width
-  coordinates: [number, number]; // [Longitude, Latitude]
+  amount: number;
+  coordinates: [number, number];
 }
 
 const LOCATIONS: LocationData[] = [
@@ -55,8 +54,8 @@ const RevenueByLocation = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: 160,       // Higher = More Zoomed In (Default is ~100)
-            center: [0, 15]   // [Longitude, Latitude] - Shifted slightly North
+            scale: 160,
+            center: [0, 15],
           }}
           style={{ width: "100%", height: "100%" }}
         >
@@ -67,9 +66,9 @@ const RevenueByLocation = () => {
                   key={geo.rsmKey}
                   geography={geo}
                   style={{
-                    default: { fill: "#D1D5DB", outline: "none" }, // Tailwind gray-300
-                    hover: { fill: "#9CA3AF", outline: "none" }, // Tailwind gray-400
-                    pressed: { fill: "#6B7280", outline: "none" }, // Tailwind gray-500
+                    default: { fill: "#D1D5DB", outline: "none" },
+                    hover: { fill: "#9CA3AF", outline: "none" },
+                    pressed: { fill: "#6B7280", outline: "none" },
                   }}
                   className="dark:fill-gray-600 dark:hover:fill-gray-500 transition-colors duration-200"
                 />
@@ -85,7 +84,6 @@ const RevenueByLocation = () => {
         </ComposableMap>
       </div>
 
-      {/* List Section */}
       <div className="flex flex-col gap-6">
         {LOCATIONS.map((item) => (
           <div key={item.name} className="w-full">
@@ -98,7 +96,6 @@ const RevenueByLocation = () => {
               </span>
             </div>
 
-            {/* Progress Bar */}
             <div className="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-1.5 overflow-hidden">
               <div
                 className="bg-[#A8C5DA] dark:bg-gray-400 h-1.5 rounded-full"
