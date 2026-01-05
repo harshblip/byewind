@@ -57,7 +57,7 @@ export default function Default() {
           <RevenueChart />
         </div>
 
-        <div className="lg:col-span-4 bg-gray-50 dark:bg-[#1C1C1C] rounded-2xl p-2 flex flex-col">
+        <div className="lg:col-span-4 bg-[#F7F9FB] dark:bg-[#1C1C1C] rounded-2xl p-2 flex flex-col">
           <RevenueByLocation />
         </div>
 

@@ -44,7 +44,7 @@ const LOCATIONS: LocationData[] = [
 
 const RevenueByLocation = () => {
   return (
-    <div className="flex flex-col h-full w-full bg-white dark:bg-[#1C1C1C] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-none">
+    <div className="flex flex-col h-full w-full bg-[#F7F9FB] dark:bg-[#1C1C1C] p-6 rounded-2xl border border-gray-100 dark:border-none">
       <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6">
         Revenue by Location
       </h3>
@@ -54,8 +54,8 @@ const RevenueByLocation = () => {
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{
-            scale: 160,
-            center: [0, 15],
+            scale: 180,
+            center: [10, 35],
           }}
           style={{ width: "100%", height: "100%" }}
         >
